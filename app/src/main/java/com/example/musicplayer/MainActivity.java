@@ -18,10 +18,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
+
     private Button play;
     private Button pause;
     private Button replay;
     private MediaPlayer mediaPlayer = new MediaPlayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMediaPlayer() throws IOException {
-        File file = new File(Environment.getExternalStorageDirectory(),"成磊 - 你不知道的事.mp3");      //这个文件要放在sd卡的根目录下
+        File file = new File(Environment.getExternalStorageDirectory(),"aaa.mp3");      //这个文件要放在sd卡的根目录下
         mediaPlayer.setDataSource(file.getPath());
         mediaPlayer.prepare();
     }
